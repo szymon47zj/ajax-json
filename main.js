@@ -10,6 +10,8 @@ Podpowiedź przed wysłaniem zadania do sprawdzenia:
 
 $(function() {
 	$('button').click(function(){
+		$('body').empty().append('<button>pobierz dane</button>');		
+		
 		$.getJSON('https://akademia108.pl/kurs-front-end/ajax/1-pobierz-dane-programisty.php', function(data) {
 			$('body').append('<div id="dane-programisty">Użytkownik: ' + data.imie +' '+ data.nazwisko + ', zawód: ' + data.zawod + ', firma: ' + data.firma +'</div>');
 		})		
